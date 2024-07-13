@@ -117,8 +117,12 @@ kubectl exec -it clickhouse-client -n clickhouse -- clickhouse client --host cli
 With port-forwarding:
 
 ```bash
+# Forward the port 9000 to your local machine to use the CLI
 kubectl port-forward svc/clickhouse 9000:9000 -n clickhouse
 ./clickhouse client --host localhost --port 9000
+# Forward the port 8123 to use the HTTP interface
+kubectl port-forward svc/clickhouse 8123:8123 -n clickhouse
+# visit https://localhost:8123/play
 ```
 
 From the load balancer:

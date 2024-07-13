@@ -6,8 +6,8 @@ spec:
   capacity:
     storage: 6Gi
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
   storageClassName: standard-rwo
   hostPath:
-    path: /data/clickhouse
+    path: /data
   persistentVolumeReclaimPolicy: Retain
