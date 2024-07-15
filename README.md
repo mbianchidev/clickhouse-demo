@@ -80,6 +80,8 @@ SELECT max(age) FROM random_data;
 SELECT count() FROM random_data;
 ```
 
+For a full reference of the SQL syntax, check the [documentation](https://clickhouse.com/docs/en/sql-reference).
+
 ### Running ClickHouse on Kubernetes - operator
 
 First, you need to create a Kubernetes cluster. You can use Minikube or any other Kubernetes cluster. In our case, we will use a pre-existing Kubernetes cluster offered by Civo Cloud.
