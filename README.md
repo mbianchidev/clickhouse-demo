@@ -26,7 +26,7 @@ Now, you can run the ClickHouse server using docker-compose
 cd docker && docker-compose up
 ```
 
-### Testing ClickHouse locally
+### Testing ClickHouse
 
 Connect to the ClickHouse server using the installed client
 
@@ -72,23 +72,51 @@ Query the data
 SELECT * FROM random_data LIMIT 10;
 ```
 
-Some aggregate queries
+Some aggregate queries you can run 1-by-1:
 
 ```sql
 SELECT avg(salary) FROM random_data;
+SELECT max(age) FROM random_data;
 SELECT count() FROM random_data;
 ```
 
-### Running ClickHouse on Kubernetes
+### Running ClickHouse on Kubernetes - operator
 
 First, you need to create a Kubernetes cluster. You can use Minikube or any other Kubernetes cluster. In our case, we will use a pre-existing Kubernetes cluster offered by Civo Cloud.
 
+Now, you can deploy ClickHouse on Kubernetes as follows:
+
 ```bash
-# Connect to the Kubernetes cluster
-kubectl config use-context civo
+# get access to your k8s cluster (always remember to switch context!)
+kubectl apply -f operator/operator.yaml -n kube-system
+
+kubectl get pods -A | grep clickhouse-operator
+
+kubectl create namespace test-clickhouse-operator
+
+kubectl apply -n test-clickhouse-operator -f operator/example.yaml
+
+kubectl -n test-clickhouse-operator exec -it chi-simple-01-simple-0-0-0 -- clickhouse-client
 ```
 
-Now, you can deploy ClickHouse on Kubernetes as follows:
+Now you can create a table and insert some data as we did before.
+This example doesn't use any service to connect externally or permanent storage, so the data will be lost when the pod is deleted.
+
+To clean up
+
+```bash
+kubectl delete -n test-clickhouse-operator -f operator/example.yaml
+
+kubectl delete namespace test-clickhouse-operator
+
+kubectl delete -f operator/operator.yaml -n kube-system
+
+kubectl get pods -A | grep clickhouse-operator
+```
+
+### Running ClickHouse on Kubernetes - vanilla
+
+Same as before but, after getting the access to the cluster you'll need to run the following commands:
 
 ```bash
 # get access to your k8s cluster (always remember to switch context!)
