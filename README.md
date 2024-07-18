@@ -107,7 +107,7 @@ This example doesn't use any service to connect externally or permanent storage,
 To clean up
 
 ```bash
-kubectl delete -n test-clickhouse-operator -f operator/example.yaml
+kubectl delete -n test-clickhouse-operator -f operator/example-1.yaml
 
 kubectl delete namespace test-clickhouse-operator
 
