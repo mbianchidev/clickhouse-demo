@@ -3,7 +3,7 @@
 This is a sample clickhouse Demo project. 
 It demonstrates how to use ClickHouse with a simple example with docker-compose and on Kubernetes.
 
-Follow through with [the presentation](https://docs.google.com/presentation/d/1kLC60nBMNH2SHYAo09MtEHgNK779K7vk_QXMW3zecOE/edit#slide=id.p1).
+Follow through with [this presentation](https://docs.google.com/presentation/d/1kLC60nBMNH2SHYAo09MtEHgNK779K7vk_QXMW3zecOE/edit#slide=id.p1).
 
 ## Prerequisites
 
@@ -86,7 +86,11 @@ For a full reference of the SQL syntax, check the [documentation](https://clickh
 
 ### Running ClickHouse on Kubernetes - operator
 
-First, you need to create a Kubernetes cluster. You can use Minikube or any other Kubernetes cluster. In our case, we will use a pre-existing Kubernetes cluster offered by Civo Cloud.
+First, you need to create a Kubernetes cluster. 
+
+You can use Minikube or k3s locally, or any other Kubernetes cluster in the cloud like EKS, AKS or GKE. 
+
+In our case, we will use a pre-existing Kubernetes cluster offered by Civo Cloud, see this [readme](/kubernetes/civo.md) and the Civo [documentation website](https://www.civo.com/docs/account/signing-up) for more information.
 
 Now, you can deploy ClickHouse on Kubernetes as follows:
 
