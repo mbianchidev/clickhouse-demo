@@ -3,6 +3,8 @@
 This is a sample clickhouse Demo project. 
 It demonstrates how to use ClickHouse with a simple example with docker-compose and on Kubernetes.
 
+Follow through with [the presentation](https://docs.google.com/presentation/d/1kLC60nBMNH2SHYAo09MtEHgNK779K7vk_QXMW3zecOE/edit#slide=id.p1).
+
 ## Prerequisites
 
 - Docker
