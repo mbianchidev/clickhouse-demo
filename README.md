@@ -96,7 +96,7 @@ kubectl get pods -A | grep clickhouse-operator
 
 kubectl create namespace test-clickhouse-operator
 
-kubectl apply -n test-clickhouse-operator -f operator/example.yaml
+kubectl apply -n test-clickhouse-operator -f operator/example-1.yaml
 
 kubectl -n test-clickhouse-operator exec -it chi-simple-01-simple-0-0-0 -- clickhouse-client
 ```
