@@ -110,7 +110,7 @@ kubectl -n test-clickhouse-operator exec -it chi-simple-01-simple-0-0-0 -- click
 Now you can create a table and insert some data as we did before.
 This example doesn't use any service to connect externally or permanent storage, so the data will be lost when the pod is deleted.
 
-To clean up
+### Cleaning up
 
 ```bash
 kubectl delete -n test-clickhouse-operator -f operator/example-1.yaml
@@ -121,6 +121,9 @@ kubectl delete -f operator/operator.yaml -n kube-system
 
 kubectl get pods -A | grep clickhouse-operator
 ```
+
+---
+---
 
 ### Running ClickHouse on Kubernetes - vanilla
 
