@@ -1,7 +1,8 @@
 ```bash
+# the name of the config will be matching your cluster name
+mv civo-clickhouse-demo-kubeconfig $HOME/.kube/
+export CIVOCONFIG=$HOME/.kube/civo-clickhouse-demo-kubeconfig
+kubectl --kubeconfig=$CIVOCONFIG config get-contexts
 # Connect to the Kubernetes cluster
-mv civo-kubeconfig.yaml $HOME/.kube/
-export KUBECONFIG=$HOME/.kube/civo-kubeconfig.yaml
-kubectl config get-contexts
-kubectl config use-context <context-name>
+kubectl config use-context clickhouse-demo
 ```
