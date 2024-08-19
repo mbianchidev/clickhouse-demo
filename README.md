@@ -112,6 +112,8 @@ This example doesn't use any service or load balancer to enable external connect
 
 ### Cleaning up
 
+To clean up the resources created by the Altinity operator on Kubernetes, you can run the following commands:
+
 ```bash
 kubectl delete -n test-clickhouse-operator -f operator/example-1.yaml &&
 
