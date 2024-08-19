@@ -5,7 +5,7 @@ It demonstrates how to use ClickHouse with a simple example with docker-compose 
 
 Follow through with [this presentation](https://docs.google.com/presentation/d/1kLC60nBMNH2SHYAo09MtEHgNK779K7vk_QXMW3zecOE/edit#slide=id.p1).
 
-_Disclaimer: I'm not endorsed or paid by ClickHouse Inc. or Altinity - at the time of drafting of this repo I hold the ambassadorship for Civo Cloud, allowing me to test software on clusters I can spin up, provided by Civo for free._
+_Disclaimer: I'm not endorsed or paid by ClickHouse Inc. or Altinity - at the time of drafting of this repo I hold the ambassadorship for Civo Cloud, allowing me to test software on clusters I can spin up, provided by Civo with free credits._
 
 ## Prerequisites
 
