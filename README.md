@@ -20,7 +20,7 @@ Install ClickHouse client
 curl https://clickhouse.com/ | sh
 ```
 
-### Running ClickHouse locally on Docker with docker-compose
+## Running ClickHouse locally on Docker with docker-compose
 
 Now, you can run the ClickHouse server using docker-compose
 
@@ -28,7 +28,7 @@ Now, you can run the ClickHouse server using docker-compose
 cd docker && docker-compose up
 ```
 
-### Testing ClickHouse
+## Testing ClickHouse
 
 Connect to the ClickHouse server using the installed client
 
@@ -84,7 +84,7 @@ SELECT count() FROM random_data;
 
 For a full reference of the SQL syntax, check the [documentation](https://clickhouse.com/docs/en/sql-reference).
 
-### Running ClickHouse on Kubernetes - operator
+## Running ClickHouse on Kubernetes - operator
 
 First, you need to create a Kubernetes cluster. 
 
@@ -125,7 +125,7 @@ kubectl get pods -A | grep clickhouse-operator
 ---
 ---
 
-### Running ClickHouse on Kubernetes - vanilla
+## Running ClickHouse on Kubernetes - vanilla
 
 Same as before but, after getting the access to the cluster you'll need to run the following commands:
 
