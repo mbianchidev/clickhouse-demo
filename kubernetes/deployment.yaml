@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: clickhouse
 spec:
-  replicas: 1 #I don't have a big enough cluster to have more than 1, just pretend it's there :D
+  replicas: 3 #I don't have a big enough cluster to have more than 1, just pretend it's there :D
   selector:
     matchLabels:
       app: clickhouse
