@@ -5,6 +5,8 @@ It demonstrates how to use ClickHouse with a simple example with docker-compose 
 
 Follow through with [this presentation](https://docs.google.com/presentation/d/1kLC60nBMNH2SHYAo09MtEHgNK779K7vk_QXMW3zecOE/edit#slide=id.p1).
 
+_Disclaimer: I'm not endorsed or paid by ClickHouse Inc. or Altinity - at the time of drafting of this repo I hold the ambassadorship for Civo Cloud, allowing me to test software on clusters I can spin up, provided by Civo for free._
+
 ## Prerequisites
 
 - Docker
@@ -84,7 +86,7 @@ SELECT count() FROM random_data;
 
 For a full reference of the SQL syntax, check the [documentation](https://clickhouse.com/docs/en/sql-reference).
 
-## Running ClickHouse on Kubernetes - operator
+## Running ClickHouse on Kubernetes - Altinity operator
 
 First, you need to create a Kubernetes cluster. 
 
@@ -107,8 +109,10 @@ kubectl apply -n test-clickhouse-operator -f operator/example-1.yaml &&
 kubectl -n test-clickhouse-operator exec -it chi-simple-01-simple-0-0-0 -- clickhouse-client
 ```
 
-Now you can create a table and insert some data as we did before.
+Now you can create a table and insert some data exactly as we did locally before.
 This example doesn't use any service or load balancer to enable external connections nor permanent storage, so remember that your data will be lost when the pod is deleted.
+
+The operator used in the example is from [Altinity](https://github.com/Altinity/clickhouse-operator)
 
 ### Cleaning up
 
