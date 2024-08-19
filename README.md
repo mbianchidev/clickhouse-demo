@@ -100,24 +100,24 @@ kubectl apply -f operator/operator.yaml -n kube-system
 
 kubectl get pods -A | grep clickhouse-operator
 
-kubectl create namespace test-clickhouse-operator
+kubectl create namespace test-clickhouse-operator &&
 
-kubectl apply -n test-clickhouse-operator -f operator/example-1.yaml
+kubectl apply -n test-clickhouse-operator -f operator/example-1.yaml &&
 
 kubectl -n test-clickhouse-operator exec -it chi-simple-01-simple-0-0-0 -- clickhouse-client
 ```
 
 Now you can create a table and insert some data as we did before.
-This example doesn't use any service to connect externally or permanent storage, so the data will be lost when the pod is deleted.
+This example doesn't use any service or load balancer to enable external connections nor permanent storage, so remember that your data will be lost when the pod is deleted.
 
 ### Cleaning up
 
 ```bash
-kubectl delete -n test-clickhouse-operator -f operator/example-1.yaml
+kubectl delete -n test-clickhouse-operator -f operator/example-1.yaml &&
 
-kubectl delete namespace test-clickhouse-operator
+kubectl delete namespace test-clickhouse-operator &&
 
-kubectl delete -f operator/operator.yaml -n kube-system
+kubectl delete -f operator/operator.yaml -n kube-system &&
 
 kubectl get pods -A | grep clickhouse-operator
 ```
@@ -131,11 +131,11 @@ Same as before but, after getting the access to the cluster you'll need to run t
 
 ```bash
 # get access to your k8s cluster (always remember to switch context!)
-kubectl create namespace clickhouse
-kubectl apply -f pv.yaml -n clickhouse
-kubectl apply -f pvc.yaml -n clickhouse
-kubectl apply -f config.yaml -n clickhouse
-kubectl apply -f deployment.yaml -n clickhouse
+kubectl create namespace clickhouse &&
+kubectl apply -f pv.yaml -n clickhouse &&
+kubectl apply -f pvc.yaml -n clickhouse &&
+kubectl apply -f config.yaml -n clickhouse &&
+kubectl apply -f deployment.yaml -n clickhouse &&
 kubectl apply -f svc.yaml -n clickhouse
 ```
 
@@ -179,10 +179,10 @@ Happy querying!
 To clean up the resources created by ClickHouse on Kubernetes, you can run the following commands:
 
 ```bash
-kubectl delete -f svc.yaml -n clickhouse
-kubectl delete -f deployment.yaml -n clickhouse
-kubectl delete -f config.yaml -n clickhouse
-kubectl delete -f pvc.yaml -n clickhouse
-kubectl delete -f pv.yaml -n clickhouse
+kubectl delete -f svc.yaml -n clickhouse &&
+kubectl delete -f deployment.yaml -n clickhouse &&
+kubectl delete -f config.yaml -n clickhouse &&
+kubectl delete -f pvc.yaml -n clickhouse &&
+kubectl delete -f pv.yaml -n clickhouse &&
 kubectl delete namespace clickhouse
 ```
