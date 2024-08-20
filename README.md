@@ -11,8 +11,9 @@ _Disclaimer: I'm not endorsed or paid by ClickHouse Inc. or Altinity - at the ti
 
 - Docker
 - Docker Compose
-- A Kubernetes cluster running somewhere
-- kubectl
+- A Kubernetes cluster running somewhere (Civo Cloud, k3s, kind or your favorite cloud provider)
+- kubectl installed
+- your kubeconfig
 
 ## Getting Started
 
