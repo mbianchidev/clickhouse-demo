@@ -1,9 +1,9 @@
 # ClickHouse Demo
 
 This is a sample clickhouse Demo project. 
-It demonstrates how to use ClickHouse with a simple example with docker-compose and on Kubernetes.
+It demonstrates how to use ClickHouse with a simple example with docker-compose and on Kubernetes with (or without) the [Altinity Operator](https://github.com/Altinity/clickhouse-operator/tree/master/docs)
 
-Follow through with [this presentation](https://docs.google.com/presentation/d/1kLC60nBMNH2SHYAo09MtEHgNK779K7vk_QXMW3zecOE/edit#slide=id.p1).
+Repo made for [this presentation](https://docs.google.com/presentation/d/1kLC60nBMNH2SHYAo09MtEHgNK779K7vk_QXMW3zecOE/edit#slide=id.p1).
 
 _Disclaimer: I'm not endorsed or paid by ClickHouse Inc. or Altinity - at the time of drafting of this repo I hold the ambassadorship for Civo Cloud, allowing me to test software on clusters I can spin up, provided by Civo with free credits._
 
