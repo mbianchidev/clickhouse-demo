@@ -1,11 +1,11 @@
 # ClickHouse Demo
 
 This is a sample clickhouse Demo project. 
-It demonstrates how to use ClickHouse with a simple example with docker-compose and on Kubernetes with (or without) the [Altinity Operator](https://github.com/Altinity/clickhouse-operator/tree/master/docs)
+It demonstrates how to use ClickHouse with a simple example with docker-compose and on Kubernetes with (or without) [Altinity's ClickHouse Operator](https://github.com/Altinity/clickhouse-operator/)
 
 Repo made for [this presentation](https://docs.google.com/presentation/d/1kLC60nBMNH2SHYAo09MtEHgNK779K7vk_QXMW3zecOE/edit#slide=id.p1).
 
-_Disclaimer: I'm not endorsed or paid by ClickHouse Inc. or Altinity - at the time of drafting of this repo I hold the ambassadorship for Civo Cloud, allowing me to test software on clusters I can spin up, provided by Civo with free credits._
+_Disclaimer: I'm not endorsed by ClickHouse Inc. or Altinity - at the time of drafting of this repo I hold the ambassadorship for Civo Cloud, allowing me to test software on clusters I can spin up, provided by Civo with free credits._
 
 ## Prerequisites
 
@@ -114,6 +114,8 @@ Now you can create a table and insert some data exactly as we did locally before
 This example doesn't use any service or load balancer to enable external connections nor permanent storage, so remember that your data will be lost when the pod is deleted.
 
 The operator used in the example is from [Altinity](https://github.com/Altinity/clickhouse-operator)
+
+You can find many more examples in [this repo](https://github.com/Altinity/clickhouse-operator/tree/master/docs) by Altinity.
 
 ### Cleaning up
 
